@@ -41,5 +41,12 @@ class MainActivity : ComponentActivity() {
 
         // Referencia al botón para ir a la Actividad Principal
         val buttonGoToMain = findViewById<Button>(R.id.buttonGoToMain)
+
+        // Asignar la acción de navegar a la Actividad Principal al presionar el botón
+        buttonGoToMain.setOnClickListener {
+            // Crear un Intent para abrir la Actividad Principal
+            val intent = Intent(this, PaginaPrincipal::class.java)
+            startActivity(intent)
+        }
     }
 }
